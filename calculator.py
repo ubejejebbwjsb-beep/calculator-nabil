@@ -1,12 +1,12 @@
 import streamlit as st
 
-# 1. إعدادات الصفحة
+# إعدادات واجهة موقع الويب
 st.set_page_config(page_title="آلة حاسبة ذكية", page_icon="🧮", layout="centered")
 
-# 2. إضافة كود تنسيق (CSS) لتغيير لون الخلفية والنصوص وتنسيق الأزرار
+# إضافة كود تنسيق (CSS) لتغيير لون الخلفية والنصوص وتنسيق الأزرار
 st.markdown("""
     <style>
-    /* تغيير خلفية الموقع بالكامل إلى اللون الأسود أو الرمادي الغامق */
+    /* تغيير خلفية الموقع بالكامل إلى اللون الأسود */
     .stApp {
         background-color: #121212;
     }
@@ -34,9 +34,9 @@ st.markdown("""
         box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
     }
     </style>
-""", unsafe_allow_index=True)
+""", unsafe_allow_html=True)
 
-# 3. محتوى الموقع الأساسي
+# محتوى الموقع الأساسي
 st.title("🧮 مشروع الآلة الحاسبة الذكية")
 st.write("---")
 
@@ -65,6 +65,5 @@ if st.button("احسب النتيجة"):
     if error_message:
         st.error(error_message)
     elif result is not None:
-        # عرض النتيجة بشكل منسق ومميز
         st.balloons() # تأثير بالونات احتفالية عند النجاح!
         st.success(f"النتيجة النهائية هي: {result}")
