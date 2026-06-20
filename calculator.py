@@ -41,9 +41,9 @@ st.title("🧮 مشروع الآلة الحاسبة الذكية")
 st.write("---")
 
 # خانات الإدخال
-num1 = st.number_input("أدخل الرقم الأول:", value=0.0)
+num1 = st.number_input("أدخل الرقم الأول:", value=0)
 prosess = st.selectbox("اختر العملية الحسابية:", ["+", "-", "*", "/"])
-num2 = st.number_input("أدخل الرقم الثاني:", value=0.0)
+num2 = st.number_input("أدخل الرقم الثاني:", value=0)
 
 result = None
 error_message = None
